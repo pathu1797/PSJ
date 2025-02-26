@@ -3,10 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Website</title>
+    <title>PSJ Sci-Fi Universe</title>
+
+    <!-- Google Font (Futuristic) -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>This is a simple GitHub Pages website.</p>
+    <div class="stars"></div> <!-- Animated Background -->
+    
+    <header>
+        <h1 class="glow">PSJ Galactic Hub</h1>
+        <p id="typing"></p> <!-- Typing Effect -->
+    </header>
+
+    <main>
+        <section class="content">
+            <h2>Welcome to the Future</h2>
+            <p>Experience the world beyond limits. The PSJ Sci-Fi Hub is your gateway to the cosmos.</p>
+            <button class="neon-btn">Explore Now</button>
+        </section>
+
+        <section class="hologram">
+            <img src="https://source.unsplash.com/500x500/?galaxy,nebula" alt="Sci-Fi Hologram">
+        </section>
+    </main>
+
+    <!-- Typing Animation -->
+    <script>
+    const text = "Loading... Initializing Systems...";
+    let i = 0;
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("typing").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+        }
+    }
+    typeWriter();
+    </script>
 </body>
 </html>
