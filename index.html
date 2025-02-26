@@ -14,6 +14,14 @@
 <body>
     <div class="stars"></div> <!-- Animated Background -->
     
+    <!-- Background Music -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="space-ambient.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Sci-Fi Sound Effects -->
+    <audio id="sciFiSound" src="sci-fi-beep.mp3"></audio>
+
     <header>
         <h1 class="glow">PSJ Galactic Hub</h1>
         <p id="typing"></p> <!-- Typing Effect -->
@@ -23,7 +31,7 @@
         <section class="content">
             <h2>Welcome to the Future</h2>
             <p>Experience the world beyond limits. The PSJ Sci-Fi Hub is your gateway to the cosmos.</p>
-            <button class="neon-btn">Explore Now</button>
+            <button class="neon-btn" onclick="playSound()">Explore Now</button>
         </section>
 
         <section class="hologram">
@@ -43,6 +51,19 @@
         }
     }
     typeWriter();
+
+    // Play sound on button click
+    function playSound() {
+        var sound = document.getElementById("sciFiSound");
+        sound.play();
+    }
+
+    // Play sound when hovering over the button
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector(".neon-btn").addEventListener("mouseenter", function() {
+            document.getElementById("sciFiSound").play();
+        });
+    });
     </script>
 </body>
 </html>
